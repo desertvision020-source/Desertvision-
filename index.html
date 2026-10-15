@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#11130f">
+  <meta name="description" content="Desertvision — See visions not obstacles. Ontdek een andere visie op stijl.">
+  <title>Desertvision — See Visions Not Obstacles</title>
+  <style>
+    :root {
+      --bg: #11130f;
+      --panel: #1c2019;
+      --cream: #f3eddf;
+      --muted: #b7b7a8;
+      --green: #b5c58a;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--cream);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 22px 7%;
+      border-bottom: 1px solid #34372d;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 4px;
+      text-decoration: none;
+    }
+
+    nav { display: flex; gap: 20px; }
+
+    nav a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .hero {
+      min-height: 76vh;
+      padding: 90px 7%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background:
+        radial-gradient(ellipse at 80% 35%, #52613b 0%, transparent 35%),
+        linear-gradient(135deg, #11130f, #25291e 65%, #11130f);
+    }
+
+    .eyebrow {
+      color: var(--green);
+      letter-spacing: 4px;
+      font-size: 11px;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: clamp(48px, 10vw, 100px);
+      line-height: .98;
+      letter-spacing: -4px;
+      margin: 25px 0;
+      max-width: 850px;
+    }
+
+    h1 span { color: var(--green); }
+
+    .hero p {
+      max-width: 460px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--cream);
+      color: var(--bg);
+      text-decoration: none;
+      padding: 13px 23px;
+      margin-top: 20px;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      width: fit-content;
+    }
+
+    section { padding: 75px 7%; }
+
+    .section-label {
+      color: var(--green);
+      letter-spacing: 3px;
+      font-size: 11px;
+    }
+
+    h2 {
+      font-size: clamp(30px, 6vw, 52px);
+      line-height: 1.1;
+      margin: 15px 0 25px;
+    }
+
+    .about p {
+      max-width: 680px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .collections {
+      background: #191c16;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 35px;
+    }
+
+    .card {
+      min-height: 220px;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background: linear-gradient(145deg, #434c34, #24281f 65%);
+      border: 1px solid #43483a;
+    }
+
+    .card:nth-child(2) {
+      background: linear-gradient(145deg, #62543d, #25251f 65%);
+    }
+
+    .card h3 { font-size: 23px; margin: 0; }
+
+    .card p { color: var(--muted); font-size: 13px; }
+
+    .statement {
+      text-align: center;
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+
+    .statement h2 { font-size: clamp(35px, 8vw, 68px); }
+
+    .statement p { color: var(--green); letter-spacing: 2px; }
+
+    .contact { background: var(--panel); }
+
+    .contact a { color: var(--green); }
+
+    footer {
+      padding: 25px 7%;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    @media (max-width: 520px) {
+      header { padding: 18px 5%; }
+      .logo { font-size: 18px; letter-spacing: 2px; }
+      nav { gap: 12px; }
+      nav a { font-size: 11px; }
+      .hero { min-height: 70vh; padding: 65px 6%; }
+      h1 { letter-spacing: -2px; }
+      section { padding: 60px 6%; }
+      .cards { grid-template-columns: 1fr; }
+      .card { min-height: 180px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="logo" href="#home">DESERTVISION</a>
+    <nav>
+      <a href="#story">Ons verhaal</a>
+      <a href="#collectie">Collectie</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="eyebrow">ANOTHER WAY OF SEEING</div>
+      <h1>SEE VISIONS.<br><span>NOT OBSTACLES.</span></h1>
+      <p>
+        Meer dan stijl. Een visie, een reis en de moed om
+        je eigen weg te kiezen. Welkom bij Desertvision.
+      </p>
+      <a class="button" href="#collectie">ONTDEK DESERTVISION ↗</a>
+    </section>
+
+    <section class="about" id="story">
+      <div class="section-label">HET VERHAAL</div>
+      <h2>Zie wat anderen<br>nog niet zien.</h2>
+      <p>
+        Desertvision is gebouwd op visie, doorzettingsvermogen
+        en persoonlijke groei. We geloven dat je achtergrond
+        je niet hoeft te beperken en dat jouw toekomst begint
+        met hoe jij naar de wereld kijkt.
+      </p>
+      <p>
+        Iedere stap is onderdeel van de reis. Blijf trouw aan
+        je waarden, werk aan je visie en kies bewust je eigen pad.
+      </p>
+    </section>
+
+    <section class="collections" id="collectie">
+      <div class="section-label">DESERTVISION ESSENTIALS</div>
+      <h2>Een eigen visie.<br>Een eigen stijl.</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Eyewear</h3>
+          <p>Brillen die jouw stijl laten spreken.</p>
+        </article>
+        <article class="card">
+          <h3>Apparel</h3>
+          <p>Moderne essentials, gedragen met betekenis.</p>
+        </article>
+      </div>
+      <p style="color: var(--muted); font-size: 13px; margin-top: 25px;">
+        Collecties worden stap voor stap ontwikkeld.
+      </p>
+    </section>
+
+    <section class="statement">
+      <div class="section-label">OUR MINDSET</div>
+      <h2>THE VISION IS<br>GREATER THAN<br>THE OBSTACLE.</h2>
+      <p>DESERTVISION · EST. 2026</p>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="section-label">STAY CONNECTED</div>
+      <h2>De reis begint hier.</h2>
+      <p>Volg de ontwikkeling van Desertvision en ontdek wat er volgt.</p>
+      <p>
+        Instagram: <a href="https://www.instagram.com/Desertvision020/">@Desertvision020</a>
+      </p>
+      <p>
+        TikTok: <a href="https://www.tiktok.com/@Desertvision">Desertvision</a>
+      </p>
+      <p>
+        E-mail: <a href="mailto:desertvision020@gmail.com">desertvision020@gmail.com</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 DESERTVISION</span>
+    <span>SEE VISIONS NOT OBSTACLES.</span>
+  </footer>
+</body>
+</html>
