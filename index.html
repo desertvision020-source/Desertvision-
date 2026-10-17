@@ -1,12 +1,11 @@
 
-<
 <!DOCTYPE html>
 <html lang="nl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#171611">
-<meta name="description" content="SAHRA by Desertvision — See Visions Not Obstacles.">
+<meta name="description" content="SAHRA by Desertvision. See Visions Not Obstacles. Ontdek modern modestwear met een eigen visie.">
 <title>SAHRA — Desertvision</title>
 <style>
 :root {
@@ -24,219 +23,391 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+a:focus-visible {
+  outline: 2px solid var(--sand);
+  outline-offset: 4px;
+}
+.announcement {
+  padding: 10px;
+  text-align: center;
+  background: var(--sand);
+  color: var(--black);
+  font-size: 10px;
+  letter-spacing: 2px;
+}
 header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 22px 6%;
-  border-bottom: 1px solid #39362d;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 7%;
+  background: rgba(23,22,17,.96);
+  border-bottom: 1px solid #39352d;
 }
 .logo {
-  font-size: 19px;
+  font-size: 16px;
   font-weight: 800;
   letter-spacing: 3px;
 }
-nav { display: flex; gap: 18px; font-size: 11px; }
-nav a { color: var(--muted); }
+.logo span { color: var(--sand); }
+nav { display: flex; align-items: center; gap: 22px; }
+nav a {
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+nav a:hover { color: var(--cream); }
 .hero {
-  min-height: 78vh;
-  position: relative;
+  min-height: 76vh;
+  min-height: 76svh;
   display: flex;
   align-items: flex-end;
-  background: #25231e;
+  position: relative;
+  isolation: isolate;
   overflow: hidden;
+  background: #28251e;
 }
 .hero img {
   position: absolute;
+  z-index: -2;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 25%;
+  object-position: center;
 }
-.hero:after {
+.hero::after {
   content: "";
   position: absolute;
+  z-index: -1;
   inset: 0;
-  background: linear-gradient(0deg, rgba(10,10,9,.96), transparent 85%);
+  background: linear-gradient(
+    0deg,
+    rgba(15,14,11,.95),
+    rgba(15,14,11,.12)
+  );
 }
-.hero-copy {
-  position: relative;
-  z-index: 1;
-  padding: 45px 7%;
-  max-width: 720px;
+.hero-content {
+  width: 100%;
+  padding: 70px 8%;
 }
 .eyebrow {
   color: var(--sand);
   font-size: 10px;
+  font-weight: bold;
   letter-spacing: 4px;
+  text-transform: uppercase;
 }
 h1 {
-  font-size: clamp(58px, 12vw, 108px);
-  line-height: .9;
-  letter-spacing: -3px;
   margin: 22px 0;
+  font-size: clamp(64px, 12vw, 150px);
+  line-height: .85;
+  letter-spacing: -.07em;
 }
-h2 {
-  font-size: clamp(36px, 7vw, 68px);
-  line-height: 1;
-  font-weight: 500;
-  margin: 20px 0;
+h1 span { color: var(--sand); }
+.hero p, .copy {
+  max-width: 460px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
 }
-p { color: var(--muted); line-height: 1.8; font-size: 14px; }
-.hero-copy p { color: var(--cream); max-width: 420px; }
 .button {
   display: inline-block;
-  margin-top: 18px;
-  padding: 15px 22px;
+  margin-top: 20px;
+  padding: 16px 22px;
   background: var(--sand);
-  color: #171611;
+  color: var(--black);
   font-size: 10px;
   font-weight: bold;
   letter-spacing: 2px;
+  text-transform: uppercase;
 }
-section { padding: 75px 7%; }
-.center { text-align: center; max-width: 780px; margin: auto; }
-.center p { max-width: 560px; margin: 20px auto; }
-.signature { background: #24221b; }
-.product {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 7%;
-  align-items: center;
-}
-.product img { width: 100%; height: auto; display: block; }
-.product-copy h2 { font-size: clamp(44px, 8vw, 78px); }
-.tag {
-  display: inline-block;
-  border: 1px solid #8e7e60;
-  padding: 8px 12px;
+.button:hover { background: var(--cream); }
+.strip {
+  padding: 18px 10px;
+  border-bottom: 1px solid #39352d;
   color: var(--sand);
+  text-align: center;
   font-size: 10px;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 }
-.secondary { background: #e3d7c2; color: #211e17; }
-.secondary p { color: #655d50; }
-.secondary .eyebrow { color: #655d50; }
+section { scroll-margin-top: 90px; }
+.section { padding: 90px 8%; }
+.intro {
+  max-width: 760px;
+  margin: auto;
+  text-align: center;
+}
+h2 {
+  margin: 18px 0;
+  font-size: clamp(40px, 7vw, 82px);
+  line-height: 1;
+  letter-spacing: -.05em;
+  font-weight: 500;
+}
+.intro p {
+  max-width: 580px;
+  margin: 24px auto 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+.product { background: #211f19; }
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 8%;
+  max-width: 1250px;
+  margin: auto;
+}
+.product-image { background: #302c24; }
+.product-image img { width: 100%; }
+.product-copy h2 { font-size: clamp(65px, 10vw, 110px); }
+.product-copy p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+.label {
+  display: inline-block;
+  border: 1px solid var(--sand);
+  padding: 10px 13px;
+  color: var(--sand);
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 28px 0;
+}
+.details div { border-top: 1px solid #494338; padding-top: 12px; }
+.details strong {
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.details p { font-size: 12px; }
+.note { font-size: 11px !important; }
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8%;
+  align-items: start;
+}
+.story-grid p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 2;
+}
+.statement {
+  color: var(--cream) !important;
+  font-size: clamp(25px, 4vw, 40px) !important;
+  line-height: 1.25 !important;
+}
+.collection {
+  background: #e3d7c2;
+  color: #211e17;
+}
+.collection .eyebrow { color: #675b48; }
+.collection-intro {
+  max-width: 580px;
+  color: #655d50;
+  font-size: 14px;
+  line-height: 1.9;
+}
 .cards {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0,1fr));
-  gap: 18px;
-  margin-top: 30px;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 35px;
 }
 .card {
-  padding: 26px;
-  min-height: 170px;
-  border: 1px solid #b8a98c;
+  min-height: 190px;
+  padding: 28px;
+  border: 1px solid rgba(33,30,23,.25);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
-.card h3 { margin: 10px 0 0; font-size: 26px; }
-.card p { margin-bottom: 0; }
-.statement { text-align: center; }
-.statement h2 { font-size: clamp(38px, 8vw, 76px); }
+.card.featured { background: rgba(255,255,255,.22); }
+.card small { letter-spacing: 2px; }
+.card h3 { margin: 12px 0 6px; font-size: 32px; font-weight: 500; }
+.card p { color: #655d50; font-size: 13px; line-height: 1.7; }
+.manifesto { text-align: center; }
+.manifesto h2 { font-size: clamp(40px, 8vw, 95px); }
+.manifesto h2 span { color: var(--sand); }
+.manifesto p { color: var(--muted); line-height: 1.8; }
+.contact-panel {
+  border: 1px solid #39352d;
+  padding: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.contact-panel h2 { font-size: clamp(35px, 5vw, 60px); }
+.contact-panel p {
+  max-width: 520px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+.socials { display: flex; flex-direction: column; gap: 18px; }
+.socials a { color: var(--sand); font-size: 12px; }
 footer {
-  padding: 25px 7%;
   display: flex;
   justify-content: space-between;
   gap: 15px;
   flex-wrap: wrap;
-  border-top: 1px solid #39362d;
+  padding: 26px 8%;
+  border-top: 1px solid #39352d;
   color: var(--muted);
   font-size: 10px;
   letter-spacing: 1px;
 }
-@media(max-width:600px) {
-  header { padding: 18px 5%; }
-  .logo { font-size: 15px; letter-spacing: 2px; }
-  nav { gap: 10px; font-size: 9px; }
-  .hero { min-height: 75vh; }
-  .hero-copy { padding: 35px 6%; }
-  section { padding: 60px 6%; }
-  .product { grid-template-columns: 1fr; gap: 25px; }
+@media (max-width: 700px) {
+  header { padding: 17px 5%; gap: 12px; }
+  .logo { font-size: 12px; letter-spacing: 2px; }
+  nav { gap: 12px; }
+  nav a { font-size: 9px; letter-spacing: 0; }
+  .hero { min-height: 70svh; }
+  .hero-content { padding: 45px 6%; }
+  .section { padding: 65px 6%; }
+  .product-grid, .story-grid { grid-template-columns: 1fr; gap: 35px; }
   .cards { grid-template-columns: 1fr; }
+  .contact-panel { padding: 28px; flex-direction: column; align-items: flex-start; }
+  .socials { margin-top: 15px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
 }
 </style>
 </head>
 <body>
+<div class="announcement">DESERTVISION · SEE VISIONS NOT OBSTACLES</div>
 <header>
-  <a class="logo" href="#home">DESERTVISION</a>
-  <nav>
-    <a href="#sahra">SAHRA</a>
-    <a href="#world">COLLECTIE</a>
-    <a href="#contact">CONTACT</a>
+  <a class="logo" href="#home">DESERT<span>VISION</span></a>
+  <nav aria-label="Hoofdnavigatie">
+    <a href="#sahra">Sahra</a>
+    <a href="#story">Ons verhaal</a>
+    <a href="#collection">Collectie</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
-
-<main>
-  <section class="hero" id="home">
-    <img src="1428277F-D976-4265-8AB3-1361F956CEAF.png" alt="De zwarte Sahra van Desertvision">
-    <div class="hero-copy">
-      <div class="eyebrow">DESERTVISION PRESENTS</div>
-      <h1>MEET<br>SAHRA.</h1>
-      <p>Modern modestwear. Distinct in detail. Created with purpose.</p>
-      <a class="button" href="#sahra">DISCOVER SAHRA ↗</a>
+<main id="home">
+  <section class="hero">
+    <img src="1428277F-D976-4265-8AB3-1361F956CEAF.png"
+      alt="Sahra van Desertvision" fetchpriority="high">
+    <div class="hero-content">
+      <div class="eyebrow">A new vision in modestwear</div>
+      <h1>MEET<br><span>SAHRA.</span></h1>
+      <p>Voor wie zijn eigen pad kiest. Ontdek de signature piece van Desertvision: modern, ingetogen en gemaakt met betekenis.</p>
+      <a class="button" href="#sahra">Ontdek Sahra ↗</a>
     </div>
   </section>
-
-  <section class="center">
-    <div class="eyebrow">MORE THAN A GARMENT</div>
-    <h2>A different way<br>to see the world.</h2>
-    <p>Sahra is the signature piece of Desertvision: a modern expression of modesty, identity and individuality. For those who walk their own path.</p>
+  <div class="strip">VISION · IDENTITY · PURPOSE · DESERTVISION</div>
+  <section class="section">
+    <div class="intro">
+      <div class="eyebrow">Meer dan een kledingstuk</div>
+      <h2>Een eigen visie.<br>Een eigen pad.</h2>
+      <p>Desertvision staat voor eigenheid, discipline en trouw blijven aan wat voor jou belangrijk is. Sahra is het begin van die visie.</p>
+    </div>
   </section>
-
-  <section class="signature" id="sahra">
-    <div class="product">
-      <img src="1428277F-D976-4265-8AB3-1361F956CEAF.png" alt="Sahra signature garment in black">
+  <section class="section product" id="sahra">
+    <div class="product-grid">
+      <div class="product-image">
+        <img src="1428277F-D976-4265-8AB3-1361F956CEAF.png"
+          alt="De Sahra signature piece">
+      </div>
       <div class="product-copy">
-        <div class="eyebrow">01 / THE SIGNATURE PIECE</div>
+        <div class="eyebrow">Desertvision original</div>
         <h2>SAHRA</h2>
-        <span class="tag">DESERTVISION ORIGINAL</span>
-        <p>Defined by a clean silhouette, subtle DV detailing and architectural lines. Sahra leads the Desertvision universe.</p>
-        <p>One vision. One signature. A new chapter in modern modestwear.</p>
-        <a class="button" href="#contact">ASK ABOUT SAHRA ↗</a>
+        <span class="label">The signature piece</span>
+        <p>Modern modestwear. Onderscheidend in detail. Ontworpen met betekenis.</p>
+        <p>Sahra brengt een moderne uitstraling samen met identiteit en individualiteit. Voor wie zijn eigen koers vaart.</p>
+        <div class="details">
+          <div><strong>Design</strong><p>Clean, modern en tijdloos.</p></div>
+          <div><strong>Identiteit</strong><p>Subtiele details, sterke uitstraling.</p></div>
+        </div>
+        <a class="button" href="mailto:desertvision020@gmail.com?subject=Interesse%20in%20Sahra">Vraag naar Sahra ↗</a>
+        <p class="note">Vraag via e-mail naar de actuele prijs, maten en beschikbaarheid.</p>
       </div>
     </div>
   </section>
-
-  <section class="secondary" id="world">
-    <div class="eyebrow">THE DESERTVISION WORLD</div>
-    <h2>Beyond Sahra.<br>Same vision.</h2>
-    <p>Complementary essentials, always secondary to the signature piece.</p>
+  <section class="section" id="story">
+    <div class="story-grid">
+      <div>
+        <div class="eyebrow">Het verhaal achter het merk</div>
+        <h2>See visions.<br>Not obstacles.</h2>
+      </div>
+      <div>
+        <p class="statement">Je hoeft niet in het plaatje te passen om je eigen visie te volgen.</p>
+        <p>Desertvision is een herinnering om verder te kijken dan obstakels en te bouwen aan iets dat echt bij je past. Blijf trouw aan je waarden, vertrouw op je visie en schrijf je eigen verhaal.</p>
+        <p>Sahra is het begin van die reis.</p>
+      </div>
+    </div>
+  </section>
+  <section class="section collection" id="collection">
+    <div class="eyebrow">The Desertvision world</div>
+    <h2>Begint bij Sahra.<br>Groeit vanuit visie.</h2>
+    <p class="collection-intro">Sahra staat centraal. Aanvullende collecties bouwen verder aan dezelfde wereld van karakter, eenvoud en persoonlijke stijl.</p>
     <div class="cards">
-      <article class="card">
-        <div class="eyebrow">02 / EYEWEAR</div>
-        <h3>Eyewear</h3>
-        <p>Frames with character. A vision of your own.</p>
+      <article class="card featured">
+        <small>01 / SIGNATURE</small>
+        <h3>Sahra</h3>
+        <p>Het middelpunt van Desertvision. Modern modestwear met een eigen identiteit.</p>
       </article>
       <article class="card">
-        <div class="eyebrow">03 / APPAREL</div>
+        <small>02 / EYEWEAR</small>
+        <h3>Eyewear</h3>
+        <p>Zonnebrillen met karakter en een uitgesproken stijl.</p>
+      </article>
+      <article class="card">
+        <small>03 / ESSENTIALS</small>
         <h3>Essentials</h3>
-        <p>Everyday pieces with a distinct identity.</p>
+        <p>Alledaagse items met dezelfde herkenbare visie.</p>
+      </article>
+      <article class="card">
+        <small>THE MINDSET</small>
+        <h3>Choose your path.</h3>
+        <p>Niet volgen om erbij te horen. Bouwen aan wat bij jou past.</p>
       </article>
     </div>
   </section>
-
-  <section class="statement">
-    <div class="eyebrow">OUR MINDSET</div>
-    <h2>SEE VISIONS.<br>NOT OBSTACLES.</h2>
+  <section class="section manifesto">
+    <div class="eyebrow">Our mindset</div>
+    <h2>SEE VISIONS.<br><span>NOT OBSTACLES.</span></h2>
     <p>Stay true to your values. Trust your vision. Build your own path.</p>
   </section>
-
-  <section id="contact">
-    <div class="eyebrow">STAY CONNECTED</div>
-    <h2>The journey starts here.</h2>
-    <p>Follow the evolution of Desertvision and the world of Sahra.</p>
-    <p><a href="https://www.instagram.com/Desertvision020/">Instagram ↗</a></p>
-    <p><a href="https://www.tiktok.com/@Desertvision">TikTok ↗</a></p>
-    <p><a href="mailto:desertvision020@gmail.com">Contact Desertvision ↗</a></p>
+  <section class="section" id="contact">
+    <div class="contact-panel">
+      <div>
+        <div class="eyebrow">Blijf verbonden</div>
+        <h2>De reis begint hier.</h2>
+        <p>Meer weten over Sahra of Desertvision? Neem contact op of volg het merk online.</p>
+        <a class="button" href="mailto:desertvision020@gmail.com?subject=Desertvision">Contact Desertvision ↗</a>
+      </div>
+      <div class="socials">
+        <a href="https://www.instagram.com/Desertvision020/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+        <a href="https://www.tiktok.com/@Desertvision" target="_blank" rel="noopener noreferrer">TikTok ↗</a>
+        <a href="mailto:desertvision020@gmail.com">E-mail ↗</a>
+      </div>
+    </div>
   </section>
 </main>
-
 <footer>
-  <span>© 2026 DESERTVISION</span>
-  <span>SAHRA — A SIGNATURE VISION</span>
+  <span>© 2026 Desertvision</span>
+  <span>SAHRA — A signature vision</span>
+  <a href="#home">Terug naar boven ↑</a>
 </footer>
 </body>
 </html>
